@@ -2,7 +2,6 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
-import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { Testimonials } from "@/components/Testimonials";
 import { ServiceCards } from "@/components/ServiceCards";
 import { Projects } from "@/components/Projects";
@@ -10,6 +9,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Mail, MessageCircle } from "lucide-react";
+import { AnimatedLines } from "@/components/AnimatedLines";
 
 const ContactButtons = () => {
   return (
@@ -59,6 +59,7 @@ const Index = () => {
   return (
     <ThemeProvider defaultTheme="dark">
       <div className="relative min-h-screen flex flex-col overflow-x-hidden">
+        <AnimatedLines />
         <AnimatePresence mode="wait">
           {isLoading ? (
             <motion.div 
@@ -123,9 +124,8 @@ const Index = () => {
               transition={{ duration: 0.6 }}
               className="flex flex-col min-h-screen"
             >
-              <AnimatedBackground />
               <Navbar />
-              <main className="flex-grow pt-32">
+              <main className="flex-grow">
                 <Hero />
                 <ServiceCards />
                 <Projects />

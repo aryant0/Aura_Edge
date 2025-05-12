@@ -8,16 +8,33 @@ import { motion, AnimatePresence } from "framer-motion";
 export function Navbar() {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      const currentScrollY = window.scrollY;
+      
+      // Determine if user is scrolling up or down
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past the threshold - hide navbar
+        setIsVisible(false);
+      } else {
+        // Scrolling up - show navbar
+        setIsVisible(true);
+      }
+      
+      // Update scrolled state for styling
+      setIsScrolled(currentScrollY > 0);
+      
+      // Update last scroll position
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const handleNavClick = (href: string) => {
     if (href === "/") {
@@ -43,12 +60,13 @@ export function Navbar() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : ''
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-r from-aura-orange/10 via-aura-orange/15 to-aura-orange/10 backdrop-blur-md border-b border-border"
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      animate={{ 
+        y: isVisible ? 0 : -100,
+        opacity: isVisible ? 1 : 0 
+      }}
+      transition={{ duration: 0.3 }}
     >
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-aura-orange/20 via-aura-orange/10 to-aura-orange/20 blur-3xl -z-10"></div>

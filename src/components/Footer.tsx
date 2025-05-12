@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Twitter, Linkedin, Instagram, Github, Facebook, ArrowUpRight, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 
 export function Footer() {
   const navigate = useNavigate();

@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -7,6 +6,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { Button } from "@/components/ui/button";
+import { Footer } from "@/components/Footer";
+import { AnimatedLines } from "@/components/AnimatedLines";
 
 const NotFound = () => {
   const location = useLocation();
@@ -22,6 +23,7 @@ const NotFound = () => {
     <ThemeProvider defaultTheme="dark">
       <div className="relative min-h-screen overflow-x-hidden">
         <AnimatedBackground />
+        <AnimatedLines />
         <Navbar />
         <div className="min-h-screen flex items-center justify-center">
           <motion.div 
@@ -59,6 +61,7 @@ const NotFound = () => {
             </motion.div>
           </motion.div>
         </div>
+        <Footer />
       </div>
     </ThemeProvider>
   );

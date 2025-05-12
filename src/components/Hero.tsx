@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -30,8 +29,26 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      <div className="container px-4">
+    <section className="relative h-screen flex items-center justify-center mt-0 overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="object-cover w-full h-full opacity-60"
+        >
+          <source
+            src="https://cdn.pixabay.com/video/2021/09/25/89627-614703091_tiny.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-sm"></div>
+      </div>
+
+      <div className="container px-4 mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <motion.div 
             className="space-y-6"
@@ -110,12 +127,11 @@ export function Hero() {
               <div className="animate-morph bg-aura-orange/20 rounded-full w-48 h-48 md:w-72 md:h-72 mx-auto"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <p className="font-display text-3xl md:text-4xl text-white font-bold tracking-wider text-glow">
-                  {/* AURA<br/>EDGE */}
                   <img 
-        src="public\AES_PROFILE_LOGO-removebg-preview.png" 
-        alt="AuraEdge Logo" 
-        className="w-24 h-24 md:w-36 md:h-36 object-contain"
-      />
+                    src="/AES_PROFILE_LOGO-removebg-preview.png" 
+                    alt="AuraEdge Logo" 
+                    className="w-24 h-24 md:w-36 md:h-36 object-contain"
+                  />
                 </p>
               </div>
             </div>
@@ -124,7 +140,7 @@ export function Hero() {
       </div>
       
       <motion.div 
-        className="absolute bottom-10 left-0 right-0 flex justify-center"
+        className="absolute bottom-10 left-0 right-0 flex justify-center z-10"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ 

@@ -8,24 +8,24 @@
 
 @layer base {
   :root {
-    --background: 52 100% 47%;
-    --foreground: 240 10% 3.9%;
-    --card: 52 100% 47%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 52 100% 47%;
-    --popover-foreground: 240 10% 3.9%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
     --primary: 24 100% 50%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 52 100% 52%;
-    --secondary-foreground: 240 10% 3.9%;
-    --muted: 52 100% 42%;
-    --muted-foreground: 240 10% 3.9%;
-    --accent: 52 100% 52%;
-    --accent-foreground: 240 10% 3.9%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 91%;
+    --secondary-foreground: 0 0% 40%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 52 100% 52%;
-    --input: 52 100% 52%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
     --ring: 24 100% 50%;
     --radius: 0.75rem;
   }
@@ -73,11 +73,11 @@
   }
   
   .text-glow {
-    text-shadow: 0 0 10px rgba(255, 115, 0, 0.5);
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
   }
   
   .orange-glow {
-    filter: drop-shadow(0 0 8px rgba(255, 115, 0, 0.5));
+    filter: drop-shadow(0 0 8px rgba(255, 107, 0, 0.5));
   }
   
   .glass-effect {
@@ -141,7 +141,7 @@
 }
 
 .orange-gradient {
-  background: linear-gradient(90deg, #FF7300, #FF9D00, #FF7300);
+  background: linear-gradient(90deg, #FF6B00, #FF7A1A, #FF6B00);
   background-size: 200% auto;
   animation: gradient 5s ease infinite;
 }

@@ -1,4 +1,3 @@
-
 import React from "react";
 
 export function FloatingShape({
@@ -49,7 +48,7 @@ export function AnimatedBackground() {
       <GridBackground />
       <FloatingShape className="w-[400px] h-[400px] -top-20 -left-20 animate-pulse-glow" />
       <FloatingShape className="w-[300px] h-[300px] top-1/3 -right-20 animate-pulse-glow animation-delay-2000" />
-      <FloatingShape className="w-[500px] h-[500px] -bottom-60 left-1/3 animate-pulse-glow animation-delay-4000" />
+      {/* <FloatingShape className="w-[500px] h-[500px] -bottom-60 left-1/3 animate-pulse-glow animation-delay-4000" /> */}
     </>
   );
-}
+} 

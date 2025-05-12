@@ -1,16 +1,18 @@
-
+import React from "react";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { motion } from "framer-motion";
+import { AnimatedLines } from "@/components/AnimatedLines";
 
 const ContactPage = () => {
   return (
     <ThemeProvider defaultTheme="dark">
       <div className="relative min-h-screen overflow-x-hidden">
         <AnimatedBackground />
+        <AnimatedLines />
         <Navbar />
         <motion.main
           initial={{ opacity: 0 }}
