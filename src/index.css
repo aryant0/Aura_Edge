@@ -1,0 +1,392 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Play:wght@400;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221.2 83.2% 53.3%;  /* #8B5CF6 - Vibrant Purple */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;  /* #A78BFA - Lighter Purple */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;  /* #8B5CF6 - Vibrant Purple */
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    cursor: none; /* Hide default cursor */
+  }
+}
+
+@layer components {
+  .hero-title {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-heading leading-tight text-shadow;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-heading mb-6 text-shadow;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-muted-foreground mb-12 max-w-2xl mx-auto;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#8B5CF6] via-[#F97316] to-[#8B5CF6] bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:shadow-primary/20;
+  }
+
+  .button-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-3 font-medium transition-all duration-200;
+  }
+
+  .shape-animation {
+    @apply absolute pointer-events-none opacity-50 z-0;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+  }
+  
+  .glow-effect {
+    @apply relative;
+  }
+  
+  .glow-effect::before {
+    content: '';
+    @apply absolute inset-0 rounded-[inherit] bg-primary/20 blur-[8px] -z-10 transition-all duration-300;
+    opacity: 0;
+  }
+  
+  .glow-effect:hover::before {
+    opacity: 1;
+  }
+  
+  .testimonial-card {
+    @apply backdrop-blur-xl bg-card/30 border-primary/30 shadow-lg;
+  }
+  
+  .space-object {
+    @apply absolute rounded-full pointer-events-none;
+  }
+  
+  .planet {
+    @apply space-object;
+    box-shadow: inset -10px -10px 40px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .shooting-star {
+    @apply absolute h-0.5 bg-white rotate-[225deg];
+    box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.9);
+    opacity: 0;
+  }
+  
+  .shooting-star-active {
+    animation: shooting 3s linear forwards;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* For animations on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Gaming style elements */
+.gaming-border {
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.gaming-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #8B5CF6, #F97316, #8B5CF6);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.neon-text {
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(139, 92, 246, 0.5),
+    0 0 15px rgba(249, 115, 22, 0.3);
+}
+
+/* Spaceship animation classes */
+.spaceship-float {
+  animation: spaceship-float 4s ease-in-out infinite;
+}
+
+@keyframes spaceship-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.space-stars {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  box-shadow: 
+    0 0 10px 1px white,
+    0 0 20px 2px #8B5CF6;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.engine-flame {
+  animation: engine-flame 0.5s infinite alternate;
+}
+
+@keyframes engine-flame {
+  0% {
+    transform: scaleX(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(1.2);
+    opacity: 1;
+  }
+}
+
+/* Space travel animation */
+.space-travel {
+  overflow: hidden;
+  position: relative;
+}
+
+.space-travel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, #8B5CF6 90%);
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.star-field {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: star-travel 4s linear infinite;
+}
+
+@keyframes star-travel {
+  0% {
+    transform: translateZ(-100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+}
+
+/* Shooting star animation */
+@keyframes shooting {
+  0% {
+    transform: translateX(0) rotate(225deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-500px) rotate(225deg);
+    opacity: 0;
+  }
+}
+
+/* Cursor hide for all devices (customize as needed) */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+  a, button, [role="button"], select, input, textarea, label {
+    cursor: none !important;
+  }
+}
+
+/* Make sure touch devices show normal cursor */
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+}
+
+/* Custom cursor styles */
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Ensure navbar elements have visible cursor */
+nav a,
+nav button,
+nav .nav-link {
+  cursor: pointer !important;
+}
+
+/* Space theme animations */
+.space-bg {
+  background: linear-gradient(to bottom, #000428, #004e92);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure text remains visible during animations */
+.text-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
