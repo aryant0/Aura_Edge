@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { AnimatedShapes } from "@/components/animated-shapes";
@@ -306,13 +306,13 @@ export default function Projects() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-6">
               <motion.div 
-                className="w-32 h-32 relative"
+                className="w-32 h-32 relative shadow-lg shadow-purple-800"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
                 <img 
-                  src="/AES_PROFILE_LOGO-removebg-preview.png" 
+                  src="/AES PROFILE LOGO.jpg" 
                   alt="Aura Edge Studios Logo" 
                   className="w-full h-full object-contain drop-shadow-lg"
                 />
@@ -331,7 +331,7 @@ export default function Projects() {
               </motion.div>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 neon-text">
-              Our <span className="text-gradient">Projects</span>
+              Our Projects<span className="text-gradient"></span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Explore our portfolio of successful projects across different industries and services.
@@ -397,12 +397,12 @@ export default function Projects() {
                       {/* Project Info */}
                       <div className="w-full lg:w-1/3 space-y-6">
                         <div>
-                          <h3 className="text-2xl font-bold mb-3 font-heading neon-text text-white">{project.title}</h3>
-                          <p className="text-gray-300 text-sm leading-relaxed">{project.description}</p>
+                          <h3 className="text-2xl font-bold mb-3 font-heading neon-text text-foreground">{project.title}</h3>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {project.tags.map((tag, index) => (
-                            <span key={index} className="text-sm bg-primary/30 px-3 py-1.5 rounded-full text-white font-bold">
+                            <span key={index} className="text-sm bg-primary/30 px-3 py-1.5 rounded-full text-foreground font-bold">
                               {tag}
                             </span>
                           ))}
@@ -440,12 +440,12 @@ export default function Projects() {
                       {/* Project Info */}
                       <div className="w-full lg:w-1/3 space-y-6">
                         <div>
-                          <h3 className="text-2xl font-bold mb-3 font-heading neon-text text-white">{project.title}</h3>
-                          <p className="text-gray-300 text-sm leading-relaxed">{project.description}</p>
+                          <h3 className="text-2xl font-bold mb-3 font-heading neon-text text-foreground">{project.title}</h3>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {project.tags.map((tag, index) => (
-                            <span key={index} className="text-sm bg-primary/30 px-3 py-1.5 rounded-full text-white font-bold">
+                            <span key={index} className="text-sm bg-primary/30 px-3 py-1.5 rounded-full text-foreground font-bold">
                               {tag}
                             </span>
                           ))}
@@ -488,12 +488,12 @@ export default function Projects() {
                       {/* Project Info */}
                       <div className="w-full lg:w-1/3 space-y-6">
                         <div>
-                          <h3 className="text-2xl font-bold mb-3 font-heading neon-text text-white">{project.title}</h3>
-                          <p className="text-gray-300 text-sm leading-relaxed">{project.description}</p>
+                          <h3 className="text-2xl font-bold mb-3 font-heading neon-text text-foreground">{project.title}</h3>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {project.tags.map((tag, index) => (
-                            <span key={index} className="text-sm bg-primary/30 px-3 py-1.5 rounded-full text-white font-bold">
+                            <span key={index} className="text-sm bg-primary/30 px-3 py-1.5 rounded-full text-foreground font-bold">
                               {tag}
                             </span>
                           ))}
@@ -536,53 +536,51 @@ export default function Projects() {
       <section className="py-20 bg-gradient-to-b from-[#1A1F2C] to-[#2A293E]">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.div 
-              className="bg-gradient-to-r from-primary/20 to-accent/20 p-8 md:p-12 rounded-3xl gaming-border relative overflow-hidden"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
+            <div 
+              className="bg-primary p-8 md:p-12 rounded-3xl shadow-xl relative overflow-hidden"
             >
               <motion.div 
                 className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10"
                 animate={{
                   background: [
-                    "radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.2) 0%, transparent 50%)",
-                    "radial-gradient(circle at 80% 50%, rgba(249, 115, 22, 0.2) 0%, transparent 50%)",
-                    "radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.2) 0%, transparent 50%)",
+                    "radial-gradient(circle at 20% 50%, rgba(85, 37, 134, 0.2) 0%, transparent 50%)",
+                    "radial-gradient(circle at 80% 50%, rgba(106, 53, 156, 0.2) 0%, transparent 50%)",
+                    "radial-gradient(circle at 20% 50%, rgba(85, 37, 134, 0.2) 0%, transparent 50%)",
                   ],
                 }}
                 transition={{ duration: 5, repeat: Infinity }}
               />
               
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading neon-text text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading text-white">
                 Ready to Start Your Own Project?
               </h2>
-              <p className="text-gray-300 mb-8">
+              <p className="text-white/90 mb-8">
                 We're excited to hear about your ideas and help bring them to life. Contact us today to discuss your project needs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="rounded-full gaming-border bg-accent hover:bg-accent/90 text-white">
-                  Get in Touch
+              <div className="flex flex-wrap justify-center gap-4 relative z-10">
+                <Button asChild size="lg" variant="secondary" className="rounded-full">
+                  <Link to="/contact">Get in Touch</Link>
                 </Button>
                 <Button 
                   size="lg" 
-                  variant="outline" 
-                  className="rounded-full gaming-border text-white border-white hover:bg-white/10"
-                  onClick={() => window.location.href = 'tel:+15551234567'}
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call Us
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="rounded-full gaming-border text-white border-white hover:bg-white/10"
-                  onClick={() => window.open('https://wa.me/15551234567', '_blank')}
+                  variant="secondary" 
+                  className="rounded-full bg-green-600 hover:bg-green-700 text-white"
+                  onClick={() => window.open('https://wa.me/919309252279?text=Hi%20there%21%20I%20came%20across%20your%20work%20on%20the%20website%20and%20was%20really%20impressed.%20I%27m%20interested%20in%20collaborating%20with%20you%20%E2%80%94%20would%20it%20be%20possible%20to%20schedule%20a%20meeting%3F', '_blank')}
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   WhatsApp
                 </Button>
+                <Button 
+                  size="lg" 
+                  variant="secondary" 
+                  className="rounded-full"
+                  onClick={() => window.location.href = 'tel:+919309252279'}
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Us
+                </Button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

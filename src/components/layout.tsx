@@ -1,4 +1,3 @@
-
 import { Navbar } from "./navbar";
 import { Footer } from "./footer";
 import { Outlet } from "react-router-dom";
@@ -26,7 +25,7 @@ export function Layout() {
         <AnimatedShapes />
         <Navbar />
         <motion.main 
-          className="flex-grow"
+          className="flex-grow relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2, duration: 0.5 }}

@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AnimatedShapes } from "@/components/animated-shapes";
 import { Counter } from "@/components/counter";
 import { SpaceshipEffects } from "@/components/spaceship-effects";
-import { ArrowRight, Code, Layout, Layers, PenTool, Monitor, Phone } from "lucide-react";
+import { ArrowRight, Code, Layout, Layers, PenTool, Monitor, Phone, MessageCircle } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
@@ -105,7 +105,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Digital Agency
+                Aura Edge Studios
               </motion.p>
               
               <motion.h1 
@@ -498,14 +498,34 @@ export default function Home() {
         <AnimatedShapes />
         <SpaceshipEffects />
         <div className="container relative z-10">
-          <div className="bg-[#7F55B1] rounded-3xl p-8 md:p-12 text-center">
+          <div className="bg-primary rounded-3xl p-8 md:p-12 text-center shadow-xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">Ready to start your project?</h2>
             <p className="text-white/90 mb-8 max-w-lg mx-auto">
               Contact us today to discuss your ideas and discover how we can help bring your vision to life.
             </p>
-            <Button asChild size="lg" variant="secondary" className="rounded-full bg-[#FFE1E0] text-[#7F55B1] hover:bg-[#F49BAB]">
-              <Link to="/contact">Get in Touch</Link>
-            </Button>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button asChild size="lg" variant="secondary" className="rounded-full">
+                <Link to="/contact">Get in Touch</Link>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="rounded-full bg-green-600 hover:bg-green-700 text-white"
+                onClick={() => window.open('https://wa.me/919309252279?text=Hi%20there%21%20I%20came%20across%20your%20work%20on%20the%20website%20and%20was%20really%20impressed.%20I%27m%20interested%20in%20collaborating%20with%20you%20%E2%80%94%20would%20it%20be%20possible%20to%20schedule%20a%20meeting%3F', '_blank')}
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                WhatsApp
+              </Button>
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="rounded-full"
+                onClick={() => window.location.href = 'tel:+919309252279'}
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Call Us
+              </Button>
+            </div>
           </div>
         </div>
       </section>

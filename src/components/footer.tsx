@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube, Github, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube, Github, MessageCircle, X } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: <Facebook size={20} />, href: "https://facebook.com/auraedgestudios", label: "Facebook" },
-    { icon: <Twitter size={20} />, href: "https://twitter.com/auraedgestudios", label: "Twitter" },
-    { icon: <Instagram size={20} />, href: "https://instagram.com/auraedgestudios", label: "Instagram" },
+    { icon: <Instagram size={20} />, href: "https://www.instagram.com/auraedgedesigns", label: "Instagram" },
+    { icon: <X size={20} />, href: "https://twitter.com/auraedgestudios", label: "X (formerly Twitter)" },
     { icon: <Linkedin size={20} />, href: "https://linkedin.com/company/auraedgestudios", label: "LinkedIn" },
+    { icon: <Facebook size={20} />, href: "https://facebook.com/auraedgestudios", label: "Facebook" },
     { icon: <Youtube size={20} />, href: "https://youtube.com/@auraedgestudios", label: "YouTube" },
-    { icon: <Github size={20} />, href: "https://github.com/auraedgestudios", label: "GitHub" },
-    { icon: <MessageCircle size={20} />, href: "https://wa.me/919309252279", label: "WhatsApp" },
   ];
   
   return (
@@ -51,6 +49,7 @@ export function Footer() {
               <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
               <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
+              <li><Link to="/packages" className="text-muted-foreground hover:text-primary transition-colors">Packages</Link></li>
               <li><Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</Link></li>
               <li><Link to="/team" className="text-muted-foreground hover:text-primary transition-colors">Our Team</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>

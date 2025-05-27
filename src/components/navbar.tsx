@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/components/theme-provider";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,10 +12,14 @@ export function Navbar() {
   const location = useLocation();
   const { theme } = useTheme();
   
+  // Ref for the logo image element
+  const logoRef = useRef<HTMLImageElement>(null);
+  
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
+    { label: "Packages", href: "/packages" },
     { label: "Projects", href: "/projects" },
     { label: "Team", href: "/team" },
     { label: "Contact", href: "/contact" },
@@ -45,6 +49,13 @@ export function Navbar() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  useEffect(() => {
+    if (logoRef.current) {
+      const newSrc = theme === 'dark' ? "/AES MONOGRAM PNG WHITE.png" : "/Logoblack.png";
+      logoRef.current.src = `${newSrc}?v=${Date.now()}`;
+    }
+  }, [theme]); // Rerun effect when theme changes
   
   return (
     <header
@@ -59,14 +70,15 @@ export function Navbar() {
         <Link to="/" className="flex items-center gap-2">
           <div className="relative">
             <img 
-              src={theme === 'dark' ? "/AES_PROFILE_LOGO-removebg-preview.png" : "/AES MONOGRAM PNG WHITE.png"} 
+              ref={logoRef}
+              src={`${theme === 'dark' ? "/AES MONOGRAM PNG WHITE.png" : "/Logoblack.png"}?v=${Date.now()}`}
               alt="Aura Edge Studios Logo" 
               className="h-16 w-auto object-contain"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 blur-xl -z-10 animate-pulse" />
           </div>
           <span className="text-xl md:text-2xl font-bold font-heading neon-text tracking-wider">
-            <span className="text-primary">Aura</span> Edge Studios
+            <span className="text-primary"></span> Aura Edge Studios
           </span>
         </Link>
         

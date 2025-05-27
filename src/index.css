@@ -15,24 +15,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221.2 83.2% 53.3%;  /* #8B5CF6 - Vibrant Purple */
+    --primary: 270 57% 34%;  /* #552586 - KSU Purple */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;  /* #A78BFA - Lighter Purple */
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 271 49% 41%;  /* #6A359C - Purple Heart */
+    --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 269 40% 51%;  /* #804FB3 - Royal Purple */
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 270 57% 34%;  /* KSU Purple */
 
     --radius: 0.5rem;
   }
@@ -47,16 +47,16 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217.2 91.2% 59.8%;  /* #8B5CF6 - Vibrant Purple */
+    --primary: 271 46% 60%;  /* #9969C7 - Amethyst */
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 274 48% 69%;  /* #B589D6 - Lenurple */
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 271 49% 41%;  /* #6A359C - Purple Heart */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -64,7 +64,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 271 46% 60%;  /* Amethyst */
   }
 }
 
@@ -75,7 +75,11 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
-    cursor: none; /* Hide default cursor */
+    cursor: none !important; /* Hide default cursor everywhere */
+  }
+
+  a, button, input, select, textarea, [role="button"] {
+    cursor: none !important;
   }
 }
 
@@ -101,7 +105,7 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-[#8B5CF6] via-[#F97316] to-[#8B5CF6] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#552586] via-[#6A359C] via-[#804FB3] via-[#9969C7] to-[#B589D6] bg-clip-text text-transparent;
   }
 
   .card-hover {
@@ -213,7 +217,7 @@ html {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(90deg, #8B5CF6, #F97316, #8B5CF6);
+  background: linear-gradient(90deg, #552586 0%, #6A359C 20%, #804FB3 40%, #9969C7 60%, #B589D6 80%);
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
   border-radius: inherit;
@@ -293,7 +297,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at center, transparent 0%, #8B5CF6 90%);
+  background: radial-gradient(ellipse at center, transparent 0%, #552586 90%);
   z-index: -1;
   opacity: 0.3;
 }
@@ -346,33 +350,14 @@ html {
   }
 }
 
-/* Cursor hide for all devices (customize as needed) */
-@media (pointer: fine) {
-  * {
-    cursor: none !important;
-  }
-  a, button, [role="button"], select, input, textarea, label {
-    cursor: none !important;
-  }
-}
-
-/* Make sure touch devices show normal cursor */
-@media (pointer: coarse) {
-  * {
-    cursor: auto !important;
-  }
-}
-
 /* Custom cursor styles */
-.cursor-pointer {
-  cursor: pointer !important;
-}
+/* Removed conflicting cursor rules below */
 
 /* Ensure navbar elements have visible cursor */
 nav a,
 nav button,
 nav .nav-link {
-  cursor: pointer !important;
+  cursor: none !important;
 }
 
 /* Space theme animations */
@@ -384,7 +369,7 @@ nav .nav-link {
 
 /* Ensure text remains visible during animations */
 .text-gradient {
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  background: linear-gradient(90deg, #552586 0%, #6A359C 20%, #804FB3 40%, #9969C7 60%, #B589D6 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
