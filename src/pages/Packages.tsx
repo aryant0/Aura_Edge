@@ -208,68 +208,46 @@ export default function Packages() {
       {/* Hero Section */}
       <section className="pt-28 pb-16 md:pt-32 md:pb-20 relative overflow-hidden">
         <AnimatedShapes />
-        <div className="container relative z-10 text-center">
-          <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-4 text-foreground"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            Our Solutions
-          </motion.h1>
-          <motion.p
-            className="text-lg text-muted-foreground mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-          >
-            Custom packages designed for your business growth
-          </motion.p>
+        <div className="container relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6">
+              Our <span className="text-gradient">Solutions</span>
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8">
+              Choose the perfect package for your business needs and take your digital presence to the next level.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Social Media Packages */}
-      <section
-        ref={refSection1 as React.RefObject<HTMLDivElement>}
-        className={`section-padding ${isSection1Visible ? "reveal active" : "reveal"}`}
-      >
+      <section className="py-16 md:py-20">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Social Media Management</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {packages.map((pkg) => (
-              <motion.div
-                key={pkg.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isSection1Visible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: pkg.id * 0.1 }}
-              >
-                <Card className={`h-full flex flex-col border-2 ${pkg.colorClass} hover:shadow-lg transition-all duration-300`}>
-                  <CardContent className="flex-grow p-6">
-                    <div className="mb-4">
-                      <h3 className="text-2xl font-bold font-heading text-foreground">{pkg.title}</h3>
-                      <div className="w-16 h-1 bg-primary rounded-full mt-2"></div>
-                    </div>
-                    <p className="text-muted-foreground mb-4 italic">{pkg.target}</p>
-                    
-                    <ul className="space-y-3 text-muted-foreground">
-                      {pkg.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <CheckCircle className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                  <div className="p-6 pt-0">
-                    <Button asChild className="w-full rounded-full">
-                      <Link to={pkg.buttonLink}>{pkg.buttonText}</Link>
-                    </Button>
-                    <p className="text-center text-sm text-muted-foreground mt-2">
-                      Contact us for custom pricing
-                    </p>
-                  </div>
-                </Card>
-              </motion.div>
+          <div className="text-center mb-12">
+            <h2 className="section-title">Social Media Management</h2>
+            <p className="section-subtitle">
+              Comprehensive social media solutions to grow your online presence.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {packages.map((pkg, index) => (
+              <Card key={index} className={`border-none shadow-md card-hover ${pkg.colorClass}`}>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold mb-2 font-heading">{pkg.title}</h3>
+                  <p className="text-muted-foreground mb-6">{pkg.target}</p>
+                  <ul className="space-y-3 mb-8">
+                    {pkg.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <div className="text-primary mt-1">✓</div>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild className="w-full rounded-full">
+                    <Link to={pkg.buttonLink}>{pkg.buttonText}</Link>
+                  </Button>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -340,47 +318,33 @@ export default function Packages() {
       </section>
 
       {/* Web Development Packages */}
-      <section
-        ref={refSection2 as React.RefObject<HTMLDivElement>}
-        className={`section-padding ${isSection2Visible ? "reveal active" : "reveal"}`}
-      >
+      <section className="py-16 md:py-20 bg-muted/50 backdrop-blur-xl">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Web & App Development</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {webPackages.map((pkg) => (
-              <motion.div
-                key={pkg.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isSection2Visible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: pkg.id * 0.1 }}
-              >
-                <Card className={`h-full flex flex-col border-2 ${pkg.colorClass} hover:shadow-lg transition-all duration-300`}>
-                  <CardContent className="flex-grow p-6">
-                    <div className="mb-4">
-                      <h3 className="text-2xl font-bold font-heading text-foreground">{pkg.title}</h3>
-                      <div className="w-16 h-1 bg-primary rounded-full mt-2"></div>
-                    </div>
-                    <p className="text-muted-foreground mb-4 italic">{pkg.target}</p>
-                    
-                    <ul className="space-y-3 text-muted-foreground">
-                      {pkg.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <CheckCircle className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                  <div className="p-6 pt-0">
-                    <Button asChild className="w-full rounded-full">
-                      <Link to={pkg.buttonLink}>{pkg.buttonText}</Link>
-                    </Button>
-                    <p className="text-center text-sm text-muted-foreground mt-2">
-                      Contact us for custom pricing
-                    </p>
-                  </div>
-                </Card>
-              </motion.div>
+          <div className="text-center mb-12">
+            <h2 className="section-title">Web & App Development</h2>
+            <p className="section-subtitle">
+              Custom web and mobile solutions tailored to your business needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {webPackages.map((pkg, index) => (
+              <Card key={index} className={`border-none shadow-md card-hover ${pkg.colorClass}`}>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold mb-2 font-heading">{pkg.title}</h3>
+                  <p className="text-muted-foreground mb-6">{pkg.target}</p>
+                  <ul className="space-y-3 mb-8">
+                    {pkg.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <div className="text-primary mt-1">✓</div>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild className="w-full rounded-full">
+                    <Link to={pkg.buttonLink}>{pkg.buttonText}</Link>
+                  </Button>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

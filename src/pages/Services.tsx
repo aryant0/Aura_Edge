@@ -339,7 +339,7 @@ export default function Services() {
       {/* Process Section */}
       <section 
         ref={refSection2 as React.RefObject<HTMLDivElement>}
-        className={`section-padding bg-muted ${isSection2Visible ? "reveal active" : "reveal"}`}
+        className={`section-padding bg-muted/50 backdrop-blur-xl ${isSection2Visible ? "reveal active" : "reveal"}`}
       >
         <div className="container">
           <div className="text-center mb-12">

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { AnimatedShapes } from "@/components/animated-shapes";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { Crown, TrendingUp, PenTool, Palette, Code, Video } from "lucide-react";
 
 export default function Team() {
   const { ref: refSection1, isIntersecting: isSection1Visible } = useScrollReveal();
@@ -14,37 +15,37 @@ export default function Team() {
       name: "Dakshraj Makne",
       role: "Founder and CEO",
       bio: "Leading the vision and strategy of AuraEdge with a passion for innovation and excellence.",
-      image: "/rev.jpg"
+      icon: <Crown className="w-12 h-12 text-primary" />
     },
     {
       name: "Mayank Birla",
       role: "Co-founder and CMO",
       bio: "Driving marketing excellence and brand growth through innovative strategies and creative solutions.",
-      image: "/mayank.jpg"
+      icon: <TrendingUp className="w-12 h-12 text-primary" />
     },
     {
       name: "Nikhil Rai",
       role: "Graphic Design Lead",
       bio: "Expert in developing and executing comprehensive graphic design strategies to drive business growth.",
-      image: "/nikhil.jpg"
+      icon: <PenTool className="w-12 h-12 text-primary" />
     },
     {
       name: "Riddhi Yadav",
       role: "Graphic Designer",
       bio: "Creating visually stunning designs that communicate brand messages effectively and creatively.",
-      image: "/riddhi.jpg"
+      icon: <Palette className="w-12 h-12 text-primary" />
     },
     {
       name: "Aryan Narayan Thakur",
       role: "Web Developer",
       bio: "Building innovative and responsive web solutions with cutting-edge technologies.",
-      image: "/aryan.jpg"
+      icon: <Code className="w-12 h-12 text-primary" />
     },
     {
       name: "Kaushal Bharadwaj",
       role: "Video Editor",
       bio: "Crafting compelling visual stories through expert video editing and post-production.",
-      image: "/editor.jpg"
+      icon: <Video className="w-12 h-12 text-primary" />
     }
   ];
 
@@ -74,12 +75,8 @@ export default function Team() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="border-none shadow-md overflow-hidden card-hover">
-                <div className="aspect-square overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  />
+                <div className="aspect-square overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                  {member.icon}
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold font-heading mb-1">{member.name}</h3>
@@ -93,7 +90,7 @@ export default function Team() {
       </section>
 
       {/* Join Our Team Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted/50 backdrop-blur-xl">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>

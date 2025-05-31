@@ -4,6 +4,29 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube, G
 export function Footer() {
   const currentYear = new Date().getFullYear();
   
+  const footerLinks = {
+    company: [
+      { label: "About Us", href: "/about" },
+      { label: "Our Team", href: "/team" },
+      { label: "Services", href: "/services" },
+      { label: "Packages", href: "/packages" },
+      { label: "Contact", href: "/contact" }
+    ],
+    services: [
+      { label: "Web Design", href: "/services#web" },
+      { label: "App Design", href: "/services#app" },
+      { label: "Video Editing", href: "/services#video" },
+      { label: "Product Design", href: "/services#product" },
+      { label: "Branding", href: "/services#branding" },
+      { label: "Graphic Design", href: "/services#graphic" }
+    ],
+    social: [
+      { label: "Instagram", href: "https://instagram.com/auraedgedesigns" },
+      { label: "LinkedIn", href: "https://linkedin.com/company/auraedgedesigns" },
+      { label: "YouTube", href: "https://youtube.com/@auraedgedesigns" }
+    ]
+  };
+  
   const socialLinks = [
     { icon: <Instagram size={20} />, href: "https://www.instagram.com/auraedgedesigns", label: "Instagram" },
     { icon: <X size={20} />, href: "https://twitter.com/auraedgestudios", label: "X (formerly Twitter)" },
@@ -46,13 +69,9 @@ export function Footer() {
           <div>
             <h3 className="font-heading font-bold text-lg mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
-              <li><Link to="/packages" className="text-muted-foreground hover:text-primary transition-colors">Packages</Link></li>
-              <li><Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</Link></li>
-              <li><Link to="/team" className="text-muted-foreground hover:text-primary transition-colors">Our Team</Link></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
+              {footerLinks.company.map((link, index) => (
+                <li key={index}><Link to={link.href} className="text-muted-foreground hover:text-primary transition-colors">{link.label}</Link></li>
+              ))}
             </ul>
           </div>
           
@@ -60,12 +79,9 @@ export function Footer() {
           <div>
             <h3 className="font-heading font-bold text-lg mb-6">Services</h3>
             <ul className="space-y-3">
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Web Development</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">App Development</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Branding & Design</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Graphic Design</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">UI/UX Design</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Consulting</Link></li>
+              {footerLinks.services.map((link, index) => (
+                <li key={index}><Link to={link.href} className="text-muted-foreground hover:text-primary transition-colors">{link.label}</Link></li>
+              ))}
             </ul>
           </div>
           

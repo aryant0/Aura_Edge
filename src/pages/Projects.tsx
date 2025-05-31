@@ -136,12 +136,12 @@ export const projects = [
   },
   {
     id: 11,
-    title: "Trading Game Demo",
+    title: "Brand Intro Video",
     category: "ui-ux",
     type: "video",
-    tags: ["App Demo", "Game Development"],
+    tags: ["Intro", "Brand Development"],
     video: "/new.mp4",
-    description: "Interactive demo showcasing the features of our trading game app.",
+    description: "Interactive intro video.",
     hasLink: false
   },
   {
@@ -164,6 +164,9 @@ export const projects = [
     tags: ["Product Design", "Graphic Design"],
     images: [
       "/Pholld_phone1.jpg",
+      "/jhaji_achar1.png",
+      "/jhaji_achar2.png",
+      "/coconut_jerry_branding.webp",
       "/pholld.jpg",
       "/pholld_phone.jpg",
       "/tshirt1.png",
@@ -183,11 +186,10 @@ export const projects = [
     tags: ["Branding", "Design"],
     images: [
       "/AES_PROFILE_LOGO-removebg-preview.png",
-      "/jhaji_achar1.png",
-      "/jhaji_achar2.png",
+      
       "/honeybrand.png",
       "/whitbull_whiskey.jpg",
-      "/coconut_jerry_branding.webp",
+      
       "/shri_laxmi2.jpg",
       "/shri laxmi jwellers.jpg",
       "/LIT METALIKS.jpg",

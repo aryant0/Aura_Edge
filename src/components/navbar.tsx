@@ -5,6 +5,7 @@ import { ThemeToggle } from "./theme-toggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/components/theme-provider";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -111,41 +112,28 @@ export function Navbar() {
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-4">
           <ThemeToggle />
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            onClick={toggleMenu}
-            className="relative z-50"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col gap-4 mt-8">
+                {navLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="text-lg font-medium hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
-      </div>
-      
-      {/* Mobile Menu */}
-      <div
-        className={cn(
-          "fixed inset-0 bg-background/95 backdrop-blur-lg flex flex-col items-center justify-center transition-opacity duration-300 md:hidden z-40",
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        )}
-      >
-        <nav className="flex flex-col items-center gap-6 text-xl">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className={cn(
-                "font-heading font-medium uppercase transition-colors hover:text-primary py-2",
-                location.pathname === link.href ? "text-primary" : "text-foreground"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Button asChild className="mt-4 gaming-border font-heading uppercase tracking-wider">
-            <Link to="/contact">Get in Touch</Link>
-          </Button>
-        </nav>
       </div>
     </header>
   );

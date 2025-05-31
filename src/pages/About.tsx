@@ -5,7 +5,7 @@ import { Counter } from "@/components/counter";
 import { AnimatedShapes } from "@/components/animated-shapes";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import { CheckCircle, Award, Clock, Users } from "lucide-react";
+import { CheckCircle, Award, Clock, Users, Crown, TrendingUp, PenTool, Palette, Code, Video } from "lucide-react";
 
 export default function About() {
   const { ref: refSection1, isIntersecting: isSection1Visible } = useScrollReveal();
@@ -16,22 +16,22 @@ export default function About() {
     {
       name: "Dakshraj Makne",
       role: "Founder and CEO",
-      image: "/rev.jpg"
+      icon: <Crown className="w-12 h-12 text-primary" />
     },
     {
       name: "Mayank Birla",
       role: "Co-founder and CMO",
-      image: "/mayank.jpg"
+      icon: <TrendingUp className="w-12 h-12 text-primary" />
     },
     {
       name: "Nikhil Rai",
       role: "Marketing Lead",
-      image: "/nikhil.jpg"
+      icon: <PenTool className="w-12 h-12 text-primary" />
     },
     {
       name: "Riddhi Yadav",
       role: "Graphic Designer",
-      image: "/riddhi.jpg"
+      icon: <Palette className="w-12 h-12 text-primary" />
     }
   ];
 
@@ -112,7 +112,7 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted/50 backdrop-blur-xl">
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <Counter end={200} suffix="+" title="Projects Completed" />
@@ -154,7 +154,7 @@ export default function About() {
       {/* Team Preview Section */}
       <section 
         ref={refSection3 as React.RefObject<HTMLDivElement>}
-        className={`section-padding bg-muted ${isSection3Visible ? "reveal active" : "reveal"}`}
+        className={`section-padding bg-muted/50 backdrop-blur-xl ${isSection3Visible ? "reveal active" : "reveal"}`}
       >
         <div className="container">
           <div className="text-center mb-12">
@@ -166,12 +166,8 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <div key={index} className="card-hover">
-                <div className="relative rounded-2xl overflow-hidden mb-4 aspect-square">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover"
-                  />
+                <div className="flex items-center justify-center mb-4 aspect-square rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10">
+                  {member.icon}
                 </div>
                 <h3 className="text-xl font-bold font-heading">{member.name}</h3>
                 <p className="text-muted-foreground">{member.role}</p>

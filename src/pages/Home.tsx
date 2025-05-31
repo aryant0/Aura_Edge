@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-20 space-travel">
+      <section className="relative min-h-[120vh] md:min-h-screen flex items-center overflow-hidden pt-32 md:pt-20 space-travel">
         <AnimatedShapes />
         <SpaceshipEffects />
         
@@ -241,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted/50 backdrop-blur-xl relative z-10 -mt-10">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Counter end={200} suffix="+" title="Projects Completed" />
@@ -296,7 +296,7 @@ export default function Home() {
       {/* About Preview Section */}
       <section
         ref={refSection2 as React.RefObject<HTMLDivElement>}
-        className={`section-padding bg-muted ${isSection2Visible ? "reveal active" : "reveal"}`}
+        className={`section-padding bg-muted/50 backdrop-blur-xl ${isSection2Visible ? "reveal active" : "reveal"}`}
       >
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -391,7 +391,7 @@ export default function Home() {
       {/* Testimonial Section */}
       <section
         ref={refSection4 as React.RefObject<HTMLDivElement>}
-        className={`section-padding relative overflow-hidden ${isSection4Visible ? "reveal active" : "reveal"}`}
+        className={`section-padding relative overflow-hidden bg-muted/50 backdrop-blur-xl ${isSection4Visible ? "reveal active" : "reveal"}`}
       >
         <div className="container relative z-10">
           <div className="text-center mb-12">

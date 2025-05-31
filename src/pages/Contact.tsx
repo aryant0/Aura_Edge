@@ -280,7 +280,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted/50 backdrop-blur-xl">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="section-title">Frequently Asked Questions</h2>
