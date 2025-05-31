@@ -2,15 +2,37 @@ import { useEffect, useState } from "react";
 
 export const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+
     const updateCursor = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener('mousemove', updateCursor);
-    return () => window.removeEventListener('mousemove', updateCursor);
-  }, []);
+    // Only add mousemove listener if not mobile
+    if (!isMobile) {
+      window.addEventListener('mousemove', updateCursor);
+    }
+
+    return () => {
+      window.removeEventListener('mousemove', updateCursor);
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, [isMobile]);
+
+  // Don't render cursor on mobile
+  if (isMobile) return null;
 
   return (
     <>

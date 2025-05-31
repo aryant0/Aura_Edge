@@ -37,7 +37,7 @@ export default function Home() {
       category: "Video Production",
       image: "/hanma.jpg",
       link: "https://play.google.com/store/apps/details?id=io.gdevelop.ide",
-      description: "Professional corporate video production services for brand storytelling and marketing campaigns."
+      description: "Professional corporate video production services for brand storytelling and graphic design campaigns."
     }
   ];
 
@@ -65,7 +65,7 @@ export default function Home() {
     {
       quote: "AuraEdge transformed our digital presence completely. Their team delivered beyond our expectations with a website that perfectly captures our brand.",
       name: "Sarah Johnson",
-      position: "Marketing Director, TechCorp"
+      position: "Graphic Design Director, TechCorp"
     },
     {
       quote: "The gaming app AuraEdge developed for us has been downloaded over 500,000 times. Their innovative approach and attention to detail made all the difference.",

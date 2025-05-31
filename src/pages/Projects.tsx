@@ -161,7 +161,7 @@ export const projects = [
     title: "Product Design Projects",
     category: "product",
     type: "image",
-    tags: ["Product Design", "Marketing"],
+    tags: ["Product Design", "Graphic Design"],
     images: [
       "/Pholld_phone1.jpg",
       "/pholld.jpg",
@@ -202,10 +202,10 @@ export const projects = [
   // Marketing Projects
   {
     id: 15,
-    title: "Marketing Projects",
-    category: "marketing",
+    title: "Graphic Design Projects",
+    category: "graphic-design",
     type: "image",
-    tags: ["Marketing", "Social Media"],
+    tags: ["Graphic Design", "Social Media"],
     images: [
       "/Purple and Pink 3D Illustration International Women's Day Instagram Post.jpg",
       "/vrinda_fertility1.jpg",
@@ -213,7 +213,7 @@ export const projects = [
       "/exotica standee.jpg",
       "/wedding_banner.jpg"
     ],
-    description: "Creative marketing campaigns and social media content for various industries.",
+    description: "Creative graphic design projects and social media content for various industries.",
     hasLink: false
   }
 ];
@@ -286,7 +286,7 @@ export default function Projects() {
     { id: "ui-ux", name: "Video Editing", icon: <Paintbrush className="mr-2 h-4 w-4" /> },
     { id: "product", name: "Product Design", icon: <GalleryHorizontal className="mr-2 h-4 w-4" /> },
     { id: "branding", name: "Branding", icon: <Image className="mr-2 h-4 w-4" /> },
-    { id: "marketing", name: "Marketing", icon: <Image className="mr-2 h-4 w-4" /> }
+    { id: "graphic-design", name: "Graphic Design", icon: <Image className="mr-2 h-4 w-4" /> },
   ];
 
   const filteredProjects = projects.filter(project => project.category === activeFilter);
@@ -304,32 +304,6 @@ export default function Projects() {
         </div>
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <motion.div 
-                className="w-32 h-32 relative shadow-lg shadow-purple-800"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <img 
-                  src="/AES PROFILE LOGO.jpg" 
-                  alt="Aura Edge Studios Logo" 
-                  className="w-full h-full object-contain drop-shadow-lg"
-                />
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-xl -z-10"
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.5, 0.8, 0.5],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-              </motion.div>
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 neon-text">
               Our Projects<span className="text-gradient"></span>
             </h1>

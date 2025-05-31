@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { 
   Monitor, Phone, PenTool, TrendingUp, 
   Code, Database, Layout, Search, 
-  Settings, Users, HelpCircle
+  Settings, Users, HelpCircle, Play, Image
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -20,76 +19,76 @@ export default function Services() {
   const allServices = [
     {
       icon: <Monitor />,
-      title: "Web Development",
-      description: "Custom websites and web applications that engage visitors and drive conversions.",
+      title: "Web Design",
+      description: "Modern, responsive websites with stunning visuals and intuitive layouts.",
       features: [
-        "Responsive design for all devices",
-        "User-friendly interfaces",
-        "Fast loading speeds and optimization",
-        "SEO-friendly structure",
-        "Integration with third-party services"
+        "Visually appealing, responsive layouts",
+        "User-friendly navigation",
+        "Fast loading speeds",
+        "SEO-optimized design",
+        "Integration with design tools & platforms"
       ]
     },
     {
       icon: <Phone />,
-      title: "App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
+      title: "App Design",
+      description: "Beautiful, intuitive interfaces for mobile apps that delight users.",
       features: [
-        "Native iOS and Android apps",
-        "Cross-platform solutions",
-        "User experience focused design",
-        "Regular updates and maintenance",
-        "App Store optimization"
+        "UI/UX for iOS and Android",
+        "High-fidelity app mockups",
+        "Seamless user experience design",
+        "Design system creation",
+        "App Store-ready visuals"
       ]
     },
     {
-      icon: <PenTool />,
-      title: "Branding & Design",
-      description: "Visual identity systems that elevate your brand's presence.",
+      icon: <Play />,
+      title: "Video Editing",
+      description: "Engaging video content that tells your story and amplifies your brand.",
       features: [
-        "Logo design and brand guidelines",
-        "Visual identity systems",
-        "Marketing materials",
-        "Packaging design",
-        "Brand strategy consulting"
+        "Social media & promo video editing",
+        "Motion graphics and animations",
+        "YouTube/Shorts/Reel optimization",
+        "Brand intro/outro creation",
+        "Color grading & sound design"
       ]
     },
     {
       icon: <Layout />,
-      title: "UI/UX Design",
-      description: "User-centered design that enhances user satisfaction and engagement.",
+      title: "Product Design",
+      description: "Designing sleek and functional digital products that users love.",
       features: [
-        "User research and personas",
-        "Wireframing and prototyping",
-        "Usability testing",
+        "End-to-end UI/UX design",
         "Interactive prototypes",
-        "Accessibility optimization"
+        "Mobile & web app design",
+        "Usability and accessibility focus",
+        "Design handoff for developers"
       ]
     },
     {
-      icon: <TrendingUp />,
-      title: "Digital Marketing",
-      description: "Data-driven marketing strategies that deliver measurable results.",
+      icon: <PenTool />,
+      title: "Branding",
+      description: "Create a strong, cohesive brand identity across all platforms.",
       features: [
-        "SEO optimization",
-        "Social media marketing",
-        "PPC campaigns",
-        "Content marketing",
-        "Analytics and reporting"
+        "Logo design & brand guidelines",
+        "Color palettes & typography",
+        "Brand messaging & tone",
+        "Packaging & print design",
+        "Visual identity systems"
       ]
     },
     {
-      icon: <Code />,
-      title: "Custom Development",
-      description: "Tailored software solutions addressing your specific business needs.",
+      icon: <Image />,
+      title: "Graphic Design",
+      description: "Creative and compelling visuals that elevate your brand's presence.",
       features: [
-        "Enterprise software development",
-        "API integration and development",
-        "Legacy system modernization",
-        "Database design and optimization",
-        "Cloud-based solutions"
+        "Social media graphics",
+        "Marketing & ad creatives",
+        "Infographics & posters",
+        "Presentation design",
+        "Consistent brand visuals"
       ]
-    },
+    }
   ];
 
   // Process steps
@@ -155,9 +154,9 @@ export default function Services() {
                 <TabsTrigger value="all">All</TabsTrigger>
                 <TabsTrigger value="web">Web</TabsTrigger>
                 <TabsTrigger value="app">App</TabsTrigger>
-                <TabsTrigger value="design">Design</TabsTrigger>
-                <TabsTrigger value="marketing">Marketing</TabsTrigger>
-                <TabsTrigger value="custom">Custom</TabsTrigger>
+                <TabsTrigger value="video">Video</TabsTrigger>
+                <TabsTrigger value="product">Product</TabsTrigger>
+                <TabsTrigger value="branding">Branding</TabsTrigger>
               </TabsList>
             </div>
             
@@ -191,7 +190,7 @@ export default function Services() {
             <TabsContent value="web" className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {allServices
-                  .filter(service => service.title === "Web Development" || service.title === "UI/UX Design")
+                  .filter(service => service.title === "Web Design")
                   .map((service, index) => (
                     <Card key={index} className="border-none shadow-md card-hover">
                       <CardContent className="p-6">
@@ -221,7 +220,7 @@ export default function Services() {
             <TabsContent value="app" className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {allServices
-                  .filter(service => service.title === "App Development")
+                  .filter(service => service.title === "App Design")
                   .map((service, index) => (
                     <Card key={index} className="border-none shadow-md card-hover">
                       <CardContent className="p-6">
@@ -247,10 +246,10 @@ export default function Services() {
               </div>
             </TabsContent>
 
-            <TabsContent value="design" className="mt-0">
+            <TabsContent value="video" className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {allServices
-                  .filter(service => service.title === "Branding & Design" || service.title === "UI/UX Design")
+                  .filter(service => service.title === "Video Editing")
                   .map((service, index) => (
                     <Card key={index} className="border-none shadow-md card-hover">
                       <CardContent className="p-6">
@@ -276,10 +275,10 @@ export default function Services() {
               </div>
             </TabsContent>
 
-            <TabsContent value="marketing" className="mt-0">
+            <TabsContent value="product" className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {allServices
-                  .filter(service => service.title === "Digital Marketing")
+                  .filter(service => service.title === "Product Design")
                   .map((service, index) => (
                     <Card key={index} className="border-none shadow-md card-hover">
                       <CardContent className="p-6">
@@ -305,10 +304,10 @@ export default function Services() {
               </div>
             </TabsContent>
 
-            <TabsContent value="custom" className="mt-0">
+            <TabsContent value="branding" className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {allServices
-                  .filter(service => service.title === "Custom Development")
+                  .filter(service => service.title === "Branding")
                   .map((service, index) => (
                     <Card key={index} className="border-none shadow-md card-hover">
                       <CardContent className="p-6">
@@ -381,7 +380,7 @@ export default function Services() {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-bold mb-2 font-heading">How long does a typical project take?</h3>
                   <p className="text-muted-foreground">
-                    Project timelines vary based on complexity and scope. A simple website might take 4-6 weeks, while more complex applications can take 3-6 months. During our initial consultation, we'll provide a detailed timeline estimate for your specific project.
+                    Project timelines vary based on complexity and scope. A simple website might take 5-7 dayss, while more complex applications can take 1-2 months. During our initial consultation, we'll provide a detailed timeline estimate for your specific project.
                   </p>
                 </CardContent>
               </Card>

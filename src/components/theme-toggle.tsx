@@ -1,4 +1,3 @@
-
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/components/theme-provider"
@@ -52,7 +51,7 @@ export function ThemeToggle() {
           transition={{ duration: 0.4 }}
           className="absolute inset-0 flex items-center justify-center"
         >
-          <Moon className="h-5 w-5 transition-all text-[#8B5CF6]" />
+          <Moon className="h-5 w-5 transition-all text-black" />
         </motion.div>
         
         <motion.div
@@ -61,7 +60,7 @@ export function ThemeToggle() {
           transition={{ duration: 0.4 }}
           className="absolute inset-0 flex items-center justify-center"
         >
-          <Sun className="h-5 w-5 transition-all text-[#F97316]" />
+          <Sun className="h-5 w-5 transition-all text-black" />
         </motion.div>
         
         {/* Animated particles */}

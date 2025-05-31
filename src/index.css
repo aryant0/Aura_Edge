@@ -78,6 +78,17 @@
     cursor: none !important; /* Hide default cursor everywhere */
   }
 
+  /* Show default cursor on mobile devices */
+  @media (max-width: 768px) {
+    body {
+      cursor: auto !important;
+    }
+    
+    a, button, input, select, textarea, [role="button"] {
+      cursor: auto !important;
+    }
+  }
+
   a, button, input, select, textarea, [role="button"] {
     cursor: none !important;
   }

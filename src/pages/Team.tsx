@@ -24,8 +24,8 @@ export default function Team() {
     },
     {
       name: "Nikhil Rai",
-      role: "Marketing Lead",
-      bio: "Expert in developing and executing comprehensive marketing strategies to drive business growth.",
+      role: "Graphic Design Lead",
+      bio: "Expert in developing and executing comprehensive graphic design strategies to drive business growth.",
       image: "/nikhil.jpg"
     },
     {

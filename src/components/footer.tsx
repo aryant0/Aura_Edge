@@ -63,7 +63,7 @@ export function Footer() {
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Web Development</Link></li>
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">App Development</Link></li>
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Branding & Design</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Digital Marketing</Link></li>
+              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Graphic Design</Link></li>
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">UI/UX Design</Link></li>
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Consulting</Link></li>
             </ul>
