@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[120vh] md:min-h-screen flex items-center overflow-hidden pt-32 md:pt-20 space-travel">
+      <section className="relative min-h-[120vh] md:min-h-screen flex items-center overflow-hidden pt-12 md:pt-8 space-travel">
         <AnimatedShapes />
         <SpaceshipEffects />
         
