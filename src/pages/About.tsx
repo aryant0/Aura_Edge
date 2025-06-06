@@ -20,12 +20,12 @@ export default function About() {
     },
     {
       name: "Mayank Birla",
-      role: "Co-founder and CMO",
+      role: "Co-founder and CFO",
       icon: <TrendingUp className="w-12 h-12 text-primary" />
     },
     {
       name: "Nikhil Rai",
-      role: "Marketing Lead",
+      role: "Digital Marketing Specialist",
       icon: <PenTool className="w-12 h-12 text-primary" />
     },
     {
@@ -90,15 +90,15 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-card p-6 rounded-2xl shadow-xl">
-                <p className="text-3xl font-bold font-heading mb-1">2015</p>
+              <div className="absolute -bottom-5 right-10 bg-card p-6 rounded-2xl shadow-xl">
+                <p className="text-3xl font-bold font-heading mb-1">2022</p>
                 <p className="text-muted-foreground">Founded</p>
               </div>
             </div>
             <div>
               <h2 className="section-title">Our Story</h2>
               <p className="text-muted-foreground mb-6">
-                AuraEdge Studios was founded in 2015 with a vision to bridge the gap between cutting-edge technology and beautiful design. What started as a small team of passionate professionals has grown into a full-service digital agency serving clients worldwide.
+                AuraEdge Studios was founded in 2022 with a vision to bridge the gap between cutting-edge technology and beautiful design. What started as a small team of passionate professionals has grown into a full-service digital agency serving clients worldwide.
               </p>
               <p className="text-muted-foreground mb-6">
                 Over the years, we've honed our skills and expanded our services to become a one-stop destination for all digital needs. Our team of experts combines creativity with technical prowess to deliver solutions that not only look great but also perform exceptionally well.

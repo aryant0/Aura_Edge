@@ -63,29 +63,49 @@ export default function Home() {
   // Testimonials
   const testimonials = [
     {
-      quote: "AuraEdge transformed our digital presence completely. Their team delivered beyond our expectations with a website that perfectly captures our brand.",
-      name: "Sarah Johnson",
-      position: "Graphic Design Director, TechCorp"
+      quote: "Working with AuraEdge Studios was a turning point for our brand. They beautifully captured the essence of our tradition-rich pickles through thoughtful packaging design and a clean, intuitive website. Their team respected our cultural roots while giving us a modern, professional presence online. It felt like they weren't just service providers — they became a part of our story.",
+      name: "Kalpana Jha",
+      position: "Founder & CEO, Jhaji"
     },
     {
-      quote: "The gaming app AuraEdge developed for us has been downloaded over 500,000 times. Their innovative approach and attention to detail made all the difference.",
-      name: "Michael Chen",
-      position: "Game Producer, NexusGames"
+      quote: "AuraEdge Studios helped us bring the purity of Chargoan Honey to life in the digital world. From a clean, easy-to-navigate website to engaging social media content, everything reflected the authenticity of our brand. Their team truly understands how to tell a brand's story visually and connect with the right audience. Their work added both credibility and charm to our presence.",
+      name: "Mizra Fahad",
+      position: "Founder, Chargoan Honey"
     },
     {
-      quote: "Working with AuraEdge Studios was a game-changer for our streaming platform. They understood our vision and executed it flawlessly.",
-      name: "Alex Rodriguez",
-      position: "CTO, StreamFusion"
+      quote: "Working with Rev Aura Studios was an outstanding experience. They perfectly captured the essence of our brand and delivered a sleek, responsive, and professional website that truly reflects Rexerra's vision. The team's attention to detail, modern design sensibility, and seamless execution exceeded our expectations. Our digital presence has significantly improved, and we're extremely satisfied with the results.",
+      name: "Vivek Kumar Jha",
+      position: "Founder & CEO, Rexerra.com"
     },
     {
-      quote: "The UI/UX design AuraEdge created for our VR experience has received multiple industry awards. Their creative vision is unmatched.",
-      name: "Priya Sharma",
-      position: "Lead Designer, VRWorld"
+      quote: "Rev Aura Studios played a key role in transforming the online presence of AUM Trading Institute. From concept to launch, their team demonstrated professionalism, creativity, and a deep understanding of user experience. The website they delivered is fast, intuitive, and perfectly aligned with our brand. We've seen a noticeable boost in student engagement and inquiries. Highly recommended!",
+      name: "Summit Sengar",
+      position: "CEO, AUM Trading Institute"
     },
     {
-      quote: "From concept to launch, AuraEdge provided exceptional service. Their team's technical expertise and creative approach exceeded all expectations.",
-      name: "James Wilson",
-      position: "Founder, GalaxyPlay"
+      quote: "Working with AuraEdge Studios has been an absolute game-changer for us. Their team understood our brand vision from the very beginning and transformed it into stunning visuals and a high-converting website. Professional, creative, and always on time — they're the kind of agency every brand dreams of collaborating with.",
+      name: "Manas Mahendra",
+      position: "CEO & Founder, Frame Digital Solutions"
+    },
+    {
+      quote: "AuraEdge Studios brought our product campaigns to life! From visually striking graphics to crisp, engaging video content — they handled it all seamlessly. Their creative direction added real value to our brand image. Highly recommended if you're looking to stand out in the beauty space.",
+      name: "Riya Khandelwal",
+      position: "Marketing Head, Nourish & Bloom Skincare"
+    },
+    {
+      quote: "Launching a fashion brand in today's market isn't easy — but with AuraEdge Studios by our side, it felt effortless. From our logo and packaging to website and ad creatives, everything they delivered was clean, bold, and perfectly aligned with the Zenix aesthetic. Their design sensibility is top-tier, and they truly understand how to build a modern fashion brand. Couldn't have asked for a better creative partner.",
+      name: "Aarav Malhotra",
+      position: "CEO, Zenix Clothing"
+    },
+    {
+      quote: "Collaborating with AuraEdge Studios has been a refreshing experience. Their ability to merge modern design thinking with business-centric execution is commendable. From strategic brand presentation to high-quality digital assets, their work reflected a deep understanding of both aesthetics and impact. In a space where precision and consistency matter, they delivered with excellence.",
+      name: "Manish Nuwal",
+      position: "Managing Director & CEO, Solar Industries India Ltd."
+    },
+    {
+      quote: "AuraEdge Studios truly impressed us with their ability to blend sustainability with style. They designed our brand identity and digital assets in a way that communicated our green mission without compromising on aesthetics. Their team was proactive, detail-oriented, and aligned with our values from day one. It's rare to find a creative partner who gets both design and purpose — AuraEdge is one of them.",
+      name: "CEO",
+      position: "EcoPack Solutions"
     }
   ];
 
@@ -309,12 +329,12 @@ export default function Home() {
                 />
               </div>
               <div className="absolute -bottom-5 right-10 bg-card p-6 rounded-2xl shadow-xl">
-                <p className="text-3xl font-bold font-heading mb-1">Since 2015</p>
+                <p className="text-3xl font-bold font-heading mb-1">Since 2022</p>
                 <p className="text-muted-foreground">Years of Excellence</p>
               </div>
             </div>
             <div>
-              <h2 className="section-title">Creating Digital Success Stories Since 2015</h2>
+              <h2 className="section-title">Creating Digital Success Stories Since 2022</h2>
               <p className="text-muted-foreground mb-6">
                 AuraEdge Studios is a team of passionate digital experts dedicated to helping businesses succeed online. Our innovative approach combines creativity with technical expertise to deliver outstanding results.
               </p>

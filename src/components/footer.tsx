@@ -47,7 +47,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground mb-6">
-              Creating digital experiences that captivate, engage, and convert since 2015.
+              Creating digital experiences that captivate, engage, and convert since 2022.
             </p>
             <div className="flex flex-wrap gap-4">
               {socialLinks.map((link, index) => (
@@ -101,8 +101,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:auraedgedesigns@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  auraedgedesigns@gmail.com
+                <a href="mailto:contact@auraedgestudios.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  contact@auraedgestudios.com
                 </a>
               </li>
             </ul>
