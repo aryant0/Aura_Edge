@@ -192,7 +192,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-bold mb-1 font-heading">Email Address</h3>
                       <p className="text-primary hover:underline">
-                        <a href="mailto:contact@auraedgestudios.com">contact@auraedgestudios.com</a>
+                        <a href="mailto:auraedgedesigns@gmail.com">auraedgedesigns@gmail.com</a>
                       </p>
                     </div>
                   </CardContent>

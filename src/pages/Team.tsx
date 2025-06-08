@@ -19,13 +19,13 @@ export default function Team() {
     },
     {
       name: "Mayank Birla",
-      role: "Co-founder and CMO",
+      role: "Co-founder and CFO",
       bio: "Driving marketing excellence and brand growth through innovative strategies and creative solutions.",
       icon: <TrendingUp className="w-12 h-12 text-primary" />
     },
     {
       name: "Nikhil Rai",
-      role: "Graphic Design Lead",
+      role: "Graphic Design Lead and CMO",
       bio: "Expert in developing and executing comprehensive graphic design strategies to drive business growth.",
       icon: <PenTool className="w-12 h-12 text-primary" />
     },

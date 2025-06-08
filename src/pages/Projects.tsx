@@ -163,12 +163,25 @@ export const projects = [
     type: "image",
     tags: ["Product Design", "Graphic Design"],
     images: [
-      "/Pholld_phone1.jpg",
+      
       "/jhaji_achar1.png",
-      "/jhaji_achar2.png",
+      
       "/coconut_jerry_branding.webp",
-      "/pholld.jpg",
-      "/pholld_phone.jpg",
+      
+       "/IMG-20250606-WA1242.jpg",
+       "/IMG-20250606-WA1243.jpg",
+       "/IMG-20250606-WA1244.jpg",
+       "/IMG-20250606-WA1245.jpg",
+       "/IMG-20250606-WA1246.jpg",
+       "/IMG-20250606-WA1247.jpg",
+       "/IMG-20250606-WA1248.jpg",
+       "/IMG-20250606-WA1249.jpg",
+       "/IMG-20250606-WA1250.jpg",
+       "/IMG-20250606-WA1251.jpg",
+       "/IMG-20250606-WA1252.jpg",
+       "/IMG-20250606-WA1253.jpg",
+       "/IMG-20250606-WA1254.jpg",
+       
       "/tshirt1.png",
       "/tshirt2.png",
       "/tshirt3.png"
@@ -177,29 +190,29 @@ export const projects = [
     hasLink: false
   },
 
-  // Branding Projects
-  {
-    id: 14,
-    title: "Branding Projects",
-    category: "branding",
-    type: "image",
-    tags: ["Branding", "Design"],
-    images: [
-      "/AES_PROFILE_LOGO-removebg-preview.png",
+  // // Branding Projects
+  // {
+  //   id: 14,
+  //   title: "Branding Projects",
+  //   category: "branding",
+  //   type: "image",
+  //   tags: ["Branding", "Design"],
+  //   images: [
+  //     "/AES_PROFILE_LOGO-removebg-preview.png",
       
-      "/honeybrand.png",
-      "/whitbull_whiskey.jpg",
+  //     "/honeybrand.png",
+  //     "/whitbull_whiskey.jpg",
       
-      "/shri_laxmi2.jpg",
-      "/shri laxmi jwellers.jpg",
-      "/LIT METALIKS.jpg",
-      'biryani1.jpg',
-      "/LIT METALIKS (1).jpg",
-      "/LIT METALIKS (2).jpg"
-    ],
-    description: "Comprehensive branding solutions for various industries and businesses.",
-    hasLink: false
-  },
+  //     "/shri_laxmi2.jpg",
+  //     "/shri laxmi jwellers.jpg",
+  //     "/LIT METALIKS.jpg",
+  //     'biryani1.jpg',
+  //     "/LIT METALIKS (1).jpg",
+  //     "/LIT METALIKS (2).jpg"
+  //   ],
+  //   description: "Comprehensive branding solutions for various industries and businesses.",
+  //   hasLink: false
+  // },
 
   // Marketing Projects
   {
@@ -211,9 +224,25 @@ export const projects = [
     images: [
       "/Purple and Pink 3D Illustration International Women's Day Instagram Post.jpg",
       "/vrinda_fertility1.jpg",
+      "/Pholld_phone1.jpg",
+      "/pholld_phone.jpg",
       "/vrinda_fertility2.jpg",
+      "/jhaji_achar2.png",
       "/exotica standee.jpg",
-      "/wedding_banner.jpg"
+      "/pholld.jpg",
+      "/AES_PROFILE_LOGO-removebg-preview.png",
+      
+      "/honeybrand.png",
+      "/whitbull_whiskey.jpg",
+      
+      "/shri_laxmi2.jpg",
+      "/shri laxmi jwellers.jpg",
+      "/LIT METALIKS.jpg",
+      'biryani1.jpg',
+      "/LIT METALIKS (1).jpg",
+      "/LIT METALIKS (2).jpg",
+      "/wedding_banner.jpg",
+
     ],
     description: "Creative graphic design projects and social media content for various industries.",
     hasLink: false
@@ -287,7 +316,7 @@ export default function Projects() {
     { id: "app", name: "App Development", icon: <Code className="mr-2 h-4 w-4" /> },
     { id: "ui-ux", name: "Video Editing", icon: <Paintbrush className="mr-2 h-4 w-4" /> },
     { id: "product", name: "Product Design", icon: <GalleryHorizontal className="mr-2 h-4 w-4" /> },
-    { id: "branding", name: "Branding", icon: <Image className="mr-2 h-4 w-4" /> },
+    // { id: "branding", name: "Branding", icon: <Image className="mr-2 h-4 w-4" /> },
     { id: "graphic-design", name: "Graphic Design", icon: <Image className="mr-2 h-4 w-4" /> },
   ];
 

@@ -20,12 +20,12 @@ export default function About() {
     },
     {
       name: "Mayank Birla",
-      role: "Co-founder and CFO",
+      role: "Co-founder and CMO",
       icon: <TrendingUp className="w-12 h-12 text-primary" />
     },
     {
       name: "Nikhil Rai",
-      role: "Digital Marketing Specialist",
+      role: "Marketing Lead",
       icon: <PenTool className="w-12 h-12 text-primary" />
     },
     {
