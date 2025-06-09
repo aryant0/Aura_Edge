@@ -25,8 +25,8 @@ export default function Team() {
     },
     {
       name: "Nikhil Rai",
-      role: "Graphic Design Lead and CMO",
-      bio: "Expert in developing and executing comprehensive graphic design strategies to drive business growth.",
+      role: "CMO & Digital Marketing Specialist",
+      bio: "Expert in Meta & Google Ads, plus WhatsApp automation to boost growth and engagement.",
       icon: <PenTool className="w-12 h-12 text-primary" />
     },
     {
